@@ -66,10 +66,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func loadData() {
-        timer?.invalidate()
-        let searchText = searchController.searchBar.text
-        timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false, block: { (_) in
-            Service.shared.getResults(description: searchText!) { [weak self] result in
+            Service.shared.getResults(description: "jobs") { [weak self] result in
                 switch result {
                 case .success(let results):
                     print(results)
@@ -79,14 +76,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     }
                 case .failure(let error):
                     DispatchQueue.main.async {
-                        let ac = UIAlertController(title: error.rawValue, message: nil, preferredStyle: .alert)
-                        ac.addAction(UIAlertAction(title: "OK", style: .default))
-                        self?.present(ac, animated: true)
+                        let alertPopUp = UIAlertController(title: error.rawValue, message: nil, preferredStyle: .alert)
+                        alertPopUp.addAction(UIAlertAction(title: "OK", style: .default))
+                        self?.present(alertPopUp, animated: true)
                     }
                     print(error)
                 }
             }
-        })
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
