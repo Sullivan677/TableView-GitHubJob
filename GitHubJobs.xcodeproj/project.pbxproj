@@ -10,11 +10,13 @@
 		750AC02C25A653630031E28D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750AC02B25A653630031E28D /* AppDelegate.swift */; };
 		750AC02E25A653630031E28D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750AC02D25A653630031E28D /* SceneDelegate.swift */; };
 		750AC03025A653630031E28D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750AC02F25A653630031E28D /* ViewController.swift */; };
-		750AC03325A653630031E28D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750AC03125A653630031E28D /* Main.storyboard */; };
 		750AC03525A653640031E28D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 750AC03425A653640031E28D /* Assets.xcassets */; };
 		750AC03825A653640031E28D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750AC03625A653640031E28D /* LaunchScreen.storyboard */; };
 		750AC04325A653640031E28D /* GitHubJobsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750AC04225A653640031E28D /* GitHubJobsTests.swift */; };
 		750AC04E25A653640031E28D /* GitHubJobsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750AC04D25A653640031E28D /* GitHubJobsUITests.swift */; };
+		750AC06725A65AF80031E28D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750AC06625A65AF80031E28D /* Service.swift */; };
+		750AC06C25A65B0B0031E28D /* Jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750AC06B25A65B0B0031E28D /* Jobs.swift */; };
+		750AC07125A65B340031E28D /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750AC07025A65B340031E28D /* ErrorMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,6 @@
 		750AC02B25A653630031E28D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		750AC02D25A653630031E28D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		750AC02F25A653630031E28D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		750AC03225A653630031E28D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		750AC03425A653640031E28D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		750AC03725A653640031E28D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		750AC03925A653640031E28D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		750AC04925A653640031E28D /* GitHubJobsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubJobsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		750AC04D25A653640031E28D /* GitHubJobsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubJobsUITests.swift; sourceTree = "<group>"; };
 		750AC04F25A653640031E28D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		750AC06625A65AF80031E28D /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		750AC06B25A65B0B0031E28D /* Jobs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jobs.swift; sourceTree = "<group>"; };
+		750AC07025A65B340031E28D /* ErrorMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		750AC01F25A653630031E28D = {
 			isa = PBXGroup;
 			children = (
+				750AC07525A65EB90031E28D /* Model */,
 				750AC02A25A653630031E28D /* GitHubJobs */,
 				750AC04125A653640031E28D /* GitHubJobsTests */,
 				750AC04C25A653640031E28D /* GitHubJobsUITests */,
@@ -99,10 +104,11 @@
 		750AC02A25A653630031E28D /* GitHubJobs */ = {
 			isa = PBXGroup;
 			children = (
+				750AC06625A65AF80031E28D /* Service.swift */,
+				750AC07025A65B340031E28D /* ErrorMessage.swift */,
 				750AC02B25A653630031E28D /* AppDelegate.swift */,
 				750AC02D25A653630031E28D /* SceneDelegate.swift */,
 				750AC02F25A653630031E28D /* ViewController.swift */,
-				750AC03125A653630031E28D /* Main.storyboard */,
 				750AC03425A653640031E28D /* Assets.xcassets */,
 				750AC03625A653640031E28D /* LaunchScreen.storyboard */,
 				750AC03925A653640031E28D /* Info.plist */,
@@ -126,6 +132,14 @@
 				750AC04F25A653640031E28D /* Info.plist */,
 			);
 			path = GitHubJobsUITests;
+			sourceTree = "<group>";
+		};
+		750AC07525A65EB90031E28D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				750AC06B25A65B0B0031E28D /* Jobs.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +247,6 @@
 			files = (
 				750AC03825A653640031E28D /* LaunchScreen.storyboard in Resources */,
 				750AC03525A653640031E28D /* Assets.xcassets in Resources */,
-				750AC03325A653630031E28D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				750AC03025A653630031E28D /* ViewController.swift in Sources */,
+				750AC06725A65AF80031E28D /* Service.swift in Sources */,
 				750AC02C25A653630031E28D /* AppDelegate.swift in Sources */,
 				750AC02E25A653630031E28D /* SceneDelegate.swift in Sources */,
+				750AC07125A65B340031E28D /* ErrorMessage.swift in Sources */,
+				750AC06C25A65B0B0031E28D /* Jobs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +312,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		750AC03125A653630031E28D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				750AC03225A653630031E28D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		750AC03625A653640031E28D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
